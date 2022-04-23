@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
+<!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8"> <![endif]-->
+<!--[if IE 8]>         <html class="no-js lt-ie9"> <![endif]-->
+<!--[if gt IE 8]>      <html class="no-js"> <!--<![endif]-->
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <title>Fundamentos de Javascript</title>
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" href="">
+    </head>
+    <body>
+        <!--[if lt IE 7]>
+            <p class="browsehappy">You are using an <strong>outdated</strong> browser. Please <a href="#">upgrade your browser</a> to improve your experience.</p>
+        <![endif]-->
+        
+        <script>
+            //POO
+            //Clases-Modelo a seguir
+            // Objetos: son una instancia de una Clase.
+            const animal = {
+                 nombre:"snoopy",
+                 sonar(){
+                     console.log("hago sonidos porque estoy vivo");
+
+                 }
+             }
+             console.log (animal)
+            
+            //creamos una funcion constructora
+            //una funcion genera un prototipo vacio
+            
+            // function Animal(nombre,especie){
+            //     this.nombre=nombre;
+            //     this.especie=especie;
+
+            //     this.sonar=function(){
+            //         console.log("Hago sonidos porque estoy vivo");
+            //     }
+
+            //     this.saludar=function(){
+            //         console.log(`Hola me llamo ${this.nombre}`);
+            //     }
+            
+            // }
+
+                      
+            // const snoopy= new Animal("Snoopy","Perro"),
+            // lolaBunny = new Animal("LolaBunny","Conejo");
+
+            // console.log(snoopy);
+            // console.log(lolaBunny);
+
+            // snoopy.sonar();
+            // snoopy.saludar();
+
+            // lolaBunny.sonar();
+            // lolaBunny.saludar();
+
+
+            //Funcion constructora sdode sacamso los metodos de la misma
+
+            function Animal(nombre,especie){
+                this.nombre=nombre;
+                this.especie=especie;
+                    
+            }
+            // Metodos agregados al prototipo de la funcion contructora
+            Animal.prototype.sonar=function(){
+               console.log("Hago sonidos porque estoy vivo");
+            }
+
+            Animal.prototype.saludar=function(){
+                console.log(`Hola me llamo ${this.nombre}`);
+            }
+
+            const snoopy= new Animal("Snoopy","Perro"),
+            lolaBunny = new Animal("LolaBunny","Conejo");
+
+            console.log(snoopy);
+            console.log(lolaBunny);
+
+            snoopy.sonar();
+            snoopy.saludar();
+
+            lolaBunny.sonar();
+            lolaBunny.saludar();
+            
+        </script> -->
+    </body>
+</html>
