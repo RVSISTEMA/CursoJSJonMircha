@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Expresiones Regulares</title>
+</head>
+
+<body>
+  <h1>Expresiones regulares</h1>
+  <script>
+    let cadena = "Lorem ipsum dolor sit amet consectetur adipisicing elit. Adipisci ab cupiditate pariatur provident iste repellendus quisquam perspiciatis illo, eligendi itaque libero ipsum vitae veniam facere. Corrupti mollitia quos impedit culpa?"
+    let expReg = new RegExp("Lorem", "g");
+    let expReg2 = /ipsum/;
+
+    console.log(expReg.test(cadena));
+    console.log(expReg2.exec(cadena));
+
+
+  </script>
+</body>
+
+
+</html>
