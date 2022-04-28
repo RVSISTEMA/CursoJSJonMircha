@@ -16,34 +16,66 @@
     // 3) Programa una función que dada una String te devuelva un Array de textos separados por cierto caracter, pe.miFuncion('hola que tal', ' ') devolverá['hola', 'que', 'tal'].
     // 4) Programa una función que repita un texto X veces, pe.miFuncion('Hola Mundo', 3) devolverá Hola Mundo Hola Mundo Hola Mundo.
 
-    function largo(txt) {
+    function largo(txt = "") {
       if (typeof (txt) === "string") {
-        return txt.lengh;
+        return txt.length;
       } else {
         return "No ingresaste una cadena valida";
       }
     }
+
+
+
+    //Ahora la reemplazamos por una arrow Function
+
     function recortar(txt, rct) {
-      return txt.substring(rct);
+      return txt.substring(0, rct);
     };
+
+    const recortarCadena = (txt = "", rct = undefined) => (!txt)
+      ? console.warn("No ingresate ningun texto")
+      : (rct === undefined) //por defecto siempre es un if
+        ? console.warn("No ingresate la longitud para recortar el texto")
+        : console.info(txt.slice(0, rct))
 
     function listar(lst) {
       return lst.split(" ");
     };
 
+    //Ahora la reemplazamos por una arrow Function
+    const listarPalabras = (lst = "", sep = undefined) =>
+      (!lst)
+        ? console.warn("No ingresaste una cadena para separar")
+        : (sep === undefined)
+          ? console.warn("No elegiste un separador")
+          : lst.split(sep)
+
     function repetir(rpt) {
       return strLista.repeat(rpt);
     };
 
+    const repetirFrase = (lst = "", rpt = undefined) => {
+      if (!lst) return "No colocaste nada en la lista";
+      if (rpt === undefined) return "no colocaste las repeticiones";
+      if (rpt == 0) return "no colocaste las repeticiones";
+      if (Math.sign(rpt) === -1) return "no colocaste las repeticiones";
+      return strLista.repeat(rpt);
+    }
+
+    //Ahora la reemplazamos por una arrow Function
+
     let strTexto = prompt("Ingrese un texto:");
     let intRecorte = parseInt(prompt("Ingrese un longitud del recorte:"), 10);
     let strLista = prompt("Ingrese una frase:");
+    let strSeparador = prompt("Ingrese un Separador para la frase:");
     let intRepeticion = parseInt(prompt("Ingrese la cantidad de repeticiones:"), 10);
 
     console.log(largo(strTexto));
     console.log(recortar(strTexto, intRecorte));
+    console.log(recortarCadena(strTexto, intRecorte));
     console.log(listar(strLista));
-    console.log("" + repetir(intRepeticion));
+    console.log(listarPalabras(strLista, strSeparador));
+    console.log(repetir(intRepeticion));
 
 
 
