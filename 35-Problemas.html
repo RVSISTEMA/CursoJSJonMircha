@@ -40,6 +40,34 @@
       return `La palabra ${txt} se repite ${intContador} veces`
     }
 
+    const VerificarPalindromo = (txt = "") => {
+      if (!txt) return "No Ingresaste ninguna palabra para analizar!";
+
+      txt = txt.toLowerCase;
+      let strInvTxt = txt.split("").reverse.join("");
+
+      if (txt === strInvTxt) {
+        return "Tu palabra es un palindromo";
+
+      } else {
+        return "Tu palabra NO es un palindromo";
+      }
+
+    }
+
+    const eliminarCaracteres = (txt = "", pat = "") => {
+      if (!txt) return "No ingresaste ningun texto";
+      if (!pat) return "No ingresate ningun patron";
+      if (!txt.includes(pat)) return "El patron no se encuentra en tu cadena"
+      return txt.replace(pat, "");
+    }
+
+    //================================================
+    let strTexto = prompt("Ingrese un texto:");
+    let intRecorte = parseInt(prompt("Ingrese un longitud del recorte:"), 10);
+    let strLista = prompt("Ingrese una frase:");
+    let strSeparador = prompt("Ingrese un Separador para la frase:");
+    let intRepeticion = parseI
 
   </script>
 </body>
