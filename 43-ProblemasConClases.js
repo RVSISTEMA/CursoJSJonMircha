@@ -33,18 +33,21 @@ class Pelicula{
     this.calificacion=calificacion;
     
     this.validarImdbId(id);
+    this.validarTitulo(titulo);
+    this.validarDirector(director);
+    this.validarEstreno(estreno);
   }
 
   validarCadenaNoVacia(propiedad, valor){
    if (!valor) return console.warn(`${propiedad} esta vacio`);
    if(typeof valor !=="string") return console.error(`${propiedad} "${valor}" ingresado NO es cadena de texto`);
-   return true
+   return true;
 
   }
 
   validarLongitudCadena(propiedad,valor,longitud){
     
-    if(valor.lenght()>longitud){
+    if(valor.length>longitud){
       return console.error(`${propiedad} tiene mas de "${longitud}" caracteres`);
     }
     return true;
@@ -66,15 +69,20 @@ class Pelicula{
   };
   
 
-  validarTitulo(){
+  validarTitulo(titulo){
     if (this.validarCadenaNoVacia("titulo",titulo));
     if (this.validarLongitudCadena("titulo",titulo,100));
   }
 
-  validarTitulo(){
+  validarDirector(director){
     if (this.validarCadenaNoVacia("Director",this.director));
     if (this.validarLongitudCadena("Director",this.director,50));
   }
   
 }
-const peli = new Pelicula({id:"aa1234567"});
+
+const peli = new Pelicula({
+  id:"aa1234567",
+  titulo:"Hola",
+  director:"Hola"
+});
