@@ -30,8 +30,32 @@ for(let y of iterador){
 }
 
 //Podemos guardar en un array los resultados de la funsion generadora
-
+// el... spread operator Dice por cada ejecucion de la funcion iterable 
 const arr = [...iterable()];
 console.log(arr);
 
+function cuadrado(valor){
+  setTimeout(() => {
+    //valor=valor;
+    return console.log({valor,resultado:valor*valor})
+  }, Math.random()*1000);
+  
+}
+
+function* generador(){
+  console.log("inicia generator");
+  yield cuadrado(0);
+  yield cuadrado(1);
+  yield cuadrado(2);
+  yield cuadrado(3);
+  yield cuadrado(4);
+  yield cuadrado(5);
+  console.log("Termina generator");
+}
+
+let gen=generador();
+
+for (let yi of gen){
+  console.log(yi);
+} 
 
