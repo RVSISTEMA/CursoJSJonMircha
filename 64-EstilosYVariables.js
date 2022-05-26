@@ -22,4 +22,24 @@ $linkDOM.style.marginRight="auto";
 $linkDOM.style.padding="1rem";
 $linkDOM.style.borderRadius=".5rem";
 
+//VAriables CSS - CustomProperties
+
+const $html=document.documentElement;
+const $body=document.body;
+
+let varDarkColor=getComputedStyle($html).getPropertyValue("--dark-color");
+let varYellowColor=getComputedStyle($html).getPropertyValue("--yellow-color");
+
+console.log(varDarkColor,varYellowColor);
+
+$body.style.backgroundColor=varDarkColor;
+//Si queremos modificar alguna variable de css...
+
+//Esto solo cambia el atributo o propiedad pero no cambia en tiempo real 
+$html.style.setProperty("--dark-color","grey");
+varDarkColor=getComputedStyle($html).getPropertyValue("--dark-color");
+
+
+
+
 

@@ -1,0 +1,9 @@
+const $card=document.querySelector(".card");
+console.log(document.documentElement)
+console.log($card);
+console.log($card.classList);
+console.log($card.className);
+console.log($card.classList.contains("rotate-45"));
+$card.classList.add("rotate-45")
+
+
