@@ -42,6 +42,11 @@
     .sepia {
       filter: sepia(1);
     }
+
+    .cards {
+      padding: thin solid var(--dark-color);
+      border: 1rem;
+    }
   </style>
 </head>
 
@@ -68,7 +73,7 @@
   <br>
   <hr>
   <br>
-  <h3>Manejo del DOm</h3>
+  <h3>Manejo del DOM</h3>
   <p id="que-es">Lorem ipsum dolor sit amet consectetur adipisicing elit. Expedita porro qui eum fugit alias numquam
     debitis unde ducimus laboriosam reiciendis repellat quia omnis, magni molestiae soluta magnam esse totam autem.
   </p>
@@ -86,31 +91,28 @@
     <a class="link-dom" href="dom.html" style="background-color: #F7DF1E; color: #222;" data-id="1"
       data-description="Documento Object Model">DOM</a>
 
-
-
-
-    <section class="card">
-      <figure>
+    <section class="cards">
+      <figure class="card">
         <img src="https://placeimg.com/200/200/nature" alt="Nature">
         <figcaption>Nature</figcaption>
 
       </figure>
-      <figure>
+      <figure class="card">
         <img src="https://placeimg.com/200/200/tech" alt="Tech">
         <figcaption>Tech</figcaption>
 
       </figure>
-      <figure>
+      <figure class="card">
         <img src="https://placeimg.com/200/200/animals" alt="Animals">
         <figcaption>Animals</figcaption>
 
       </figure>
-      <figure>
+      <figure class="card">
         <img src="https://placeimg.com/200/200/people" alt="People">
         <figcaption>People</figcaption>
 
       </figure>
-      <figure>
+      <figure class="card">
         <img src="https://placeimg.com/200/200/arch" alt="Arch">
         <figcaption>Arch</figcaption>
 
@@ -122,7 +124,7 @@
   </nav>
   <!-- <script src="61-Dom.js"></script> -->
   <!-- <script src="62-Dom Atributos.js"></script> -->
-  <script src="65-ClasesCSS.js"></script>
+  <script src="68-DOMElementosYFragmentos.js"></script>
 </body>
 
 </html>
