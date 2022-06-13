@@ -2,7 +2,7 @@
   //El appendChild siempre inserta al final de body
   // pero hay otros metodos que permiten insertarlo al inicio o en el medio
 
-  //Creaos las variables
+  //Creamos las variables
 
   const $cards=document.querySelector(".cards"),
     $newCard=document.createElement("figure");
@@ -16,8 +16,10 @@
   $cards.replaceChild($newCard,$cards.children[2]);
   $cards.insertBefore($newCard,$cards.firstElementChild)
   $cards.removeChild($cards.lastElementChild);
-
+  //Clonamos una seccion entera de tarjetas
+  //El true clona todo el contenido el false solo la estructura
   $cloneCards=$cards.cloneNode(true);
+  //Ahora lo agregamos al final de documento
   document.body.appendChild($cloneCards);
   
 
