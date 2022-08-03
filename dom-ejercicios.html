@@ -3,7 +3,7 @@
 <!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8"> <![endif]-->
 <!--[if IE 8]>         <html class="no-js lt-ie9"> <![endif]-->
 <!--[if gt IE 8]>      <html class="no-js"> <!--<![endif]-->
-<html>
+<html lang="es">
 
 <head>
   <meta charset="utf-8">
@@ -11,28 +11,43 @@
   <title>Ejercicios del DOM</title>
   <meta name="description" content="">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <link rel="stylesheet" href="css/dom-ejercicios.css">
   <!--usamos https://cdnjs.com/ para referenciar el css de hamburguer 
-  cdnjs es un servicio de CDN gratuito y de código abierto
-  Una red de distribución de contenido (CDN) es un grupo de servidores repartidos en distintas zonas geográficas que aceleran la entrega del contenido web al acercarlo a los usuarios-->
+    cdnjs es un servicio de CDN gratuito y de código abierto
+    Una red de distribución de contenido (CDN) es un grupo de servidores repartidos en distintas zonas geográficas que aceleran la entrega del contenido web al acercarlo a los usuarios-->
 
   <!-- La minificación (en inglés, uglify o minification) es la acción de eliminar carácteres o comentarios en un archivo de código (.html, .css o .js, por ejemplo), ya que su omisión no hace que el código deje de funcionar. El objetivo es reducir su tamaño total, y por lo tanto, descargarlos más rápido desde el navegador. En archivos CSS muy grandes esto suele influir de forma considerable, por lo que es una buena práctica utilizar herramientas de minificación y reducir el tamaño del archivo CSS condensando toda su información, eliminando espacios, retornos de carro, etc... -->
 
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/hamburgers/1.2.1/hamburgers.min.css">
+  <link rel="stylesheet" href="css/dom-ejercicios.css">
 </head>
-<header class="header">
-  <h1>Ejercicios del DOM</h1>
-</header>
-<aside class="panel">
-  <!--  Las podemos encontrar usualmente como barras laterales colocadas al margen, en las cuales se coloca alguna explicación, información, biografía, glosario o algún otro elemento que, de manera indirecta, está relacionada con el contenido. -->
-  <nav class="menu">
-    <!-- a[href="seccion$"]*5{Sección $} -->
-    <a href="#seccion1">Sección 1</a>
-    <a href="#seccion2">Sección 2</a>
-    <a href="#seccion3">Sección 3</a>
-    <a href="#seccion4">Sección 4</a>
-    <a href="#seccion5">Sección 5</a>
-  </nav>
+
+<body>
+  <!--[if lt IE 7]>
+      <p class="browsehappy">You are using an <strong>outdated</strong> browser. Please <a href="#">upgrade your browser</a> to improve your experience.</p>
+    <![endif]-->
+
+  <header class="header">
+    <h1>Ejercicios del DOM</h1>
+  </header>
+  <!-- Copiamos de https://jonsuh.com/hamburgers/ el paso 3  -->
+  <button class="panel-btn hamburger hamburger--vortex" type="button">
+    <span class="hamburger-box">
+      <span class="hamburger-inner"></span>
+    </span>
+  </button>
+
+  <aside class="panel">
+    <!--  Las podemos encontrar usualmente como barras laterales colocadas al margen, en las cuales se coloca alguna explicación, información, biografía, glosario o algún otro elemento que, de manera indirecta, está relacionada con el contenido. -->
+    <nav class="menu">
+      <!-- a[href="seccion$"]*5{Sección $} -->
+      <a href="#seccion1">Sección 1</a>
+      <a href="#seccion2">Sección 2</a>
+      <a href="#seccion3">Sección 3</a>
+      <a href="#seccion4">Sección 4</a>
+      <a href="#seccion5">Sección 5</a>
+    </nav>
+  </aside>
+
   <main>
     <!-- section#seccion$.section*5>h2{Sección $} -->
     <section id="seccion1" class="section">
@@ -51,25 +66,12 @@
       <h2>Sección 5</h2>
     </section>
   </main>
+
+
+
   <script src="js/index_dom.js" type="module"></script>
 
 
-</aside>
-<!-- Copiamos de https://jonsuh.com/hamburgers/ el paso 3  -->
-<button class="hamburger hamburger--vortex" type="button">
-  <span class="hamburger-box">
-    <span class="hamburger-inner"></span>
-  </span>
-</button>
-
-<body>
-  <!--[if lt IE 7]>
-      <p class="browsehappy">You are using an <strong>outdated</strong> browser. Please <a href="#">upgrade your browser</a> to improve your experience.</p>
-    <![endif]-->
-
-
-
-  <script src="" async defer></script>
 </body>
 
 </html>
